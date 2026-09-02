@@ -13,3 +13,9 @@
 
 @media(max-width:800px){.nav.contenedor{padding-inline:20px}.brand img:first-child{width:40px;height:42px}.brand img:nth-child(2){width:120px;height:42px}.menu{margin-left:0}.registro .llamada{min-height:0;padding-block:1.25rem}}
 @media(max-width:460px){.brand img:first-child{width:32px;height:34px}.brand img:nth-child(2){width:92px;height:34px}.registro{background-position:center}.registro .llamada{padding-block:1.5rem}}
+
+/* El registro principal queda dentro del espacio libre del flyer, sin cubrir
+   los logos, título, fecha ni los datos del evento. */
+.flyer-portada{position:relative}.flyer-portada .hero-registro{position:absolute;left:15%;bottom:6%;display:block;padding:0;background:transparent}.flyer-portada .hero-registro .boton{box-shadow:0 8px 24px rgba(0,8,48,.28)}
+@media(max-width:800px){.flyer-portada .hero-registro{left:50%;bottom:5%;transform:translateX(-50%);white-space:nowrap}}
+@media(max-width:460px){.flyer-portada .hero-registro{bottom:3%;transform:translateX(-50%) scale(.82);transform-origin:center bottom}}
