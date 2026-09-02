@@ -19,4 +19,3 @@ Entre a [Google Analytics](https://analytics.google.com/) con la cuenta que sea 
 - País y ciudad: **Informes → Datos demográficos → Detalles**.
 - Celular, computadora o tablet: **Informes → Tecnología → Detalles técnicos**.
 - Sección más visitada: cree una exploración con el evento `seccion_vista` y la dimensión `section_name`; los clics de registro usan el evento `registro_click`.
-# m-citedi-francia

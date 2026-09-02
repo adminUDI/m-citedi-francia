@@ -1,5 +1,5 @@
 /* Analítica: agregue aquí el ID de medición de Google Analytics 4 antes de publicar. */
-window.SITE_ANALYTICS = { googleMeasurementId: '' };
+window.SITE_ANALYTICS = { googleMeasurementId: 'G-JHFJDX7WV0' };
 
 window.trackEvent = function (name, params = {}) {
   if (window.gtag && window.SITE_ANALYTICS.googleMeasurementId) {
