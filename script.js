@@ -22,6 +22,40 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.45 });
 observedSections.forEach((section) => sectionObserver.observe(section));
 
+const visitsTotal = document.querySelector('#visitas-total');
+const visitsStatus = document.querySelector('#visitas-estado');
+
+function showVisitCount(data) {
+  if (!visitsTotal || !visitsStatus || !Number.isFinite(Number(data?.total))) return;
+  visitsTotal.textContent = new Intl.NumberFormat('es-MX').format(Number(data.total));
+  const updatedAt = data.updatedAt ? new Date(data.updatedAt) : null;
+  visitsStatus.textContent = updatedAt && !Number.isNaN(updatedAt.getTime())
+    ? `Actualizado: ${new Intl.DateTimeFormat('es-MX', { dateStyle: 'medium', timeStyle: 'short' }).format(updatedAt)}`
+    : 'Conteo actualizado.';
+}
+
+async function registerAndLoadVisitCount() {
+  const endpoint = window.SITE_ANALYTICS?.publicVisitCounterEndpoint;
+  if (!endpoint || !visitsTotal || !visitsStatus) return;
+
+  visitsTotal.textContent = 'Cargando…';
+  visitsStatus.textContent = 'Consultando el conteo publicado.';
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path: window.location.pathname })
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    showVisitCount(await response.json());
+  } catch (error) {
+    visitsTotal.textContent = 'No disponible';
+    visitsStatus.textContent = 'No fue posible actualizar el conteo publicado.';
+  }
+}
+
+registerAndLoadVisitCount();
+
 const perfiles = {
   alan: {
     nombre: 'Alán Díaz Rizo', institucion: 'SORBONNE UNIVERSITY · CNRS · LIP6',

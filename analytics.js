@@ -1,5 +1,14 @@
-/* Analítica: agregue aquí el ID de medición de Google Analytics 4 antes de publicar. */
-window.SITE_ANALYTICS = { googleMeasurementId: 'G-JHFJDX7WV0' };
+/*
+ * Google Analytics registra el tráfico; sus cifras no se pueden leer de forma
+ * segura desde un sitio estático. Para publicar un total en la página,
+ * configure publicVisitCounterEndpoint con un endpoint HTTPS que incremente
+ * atómicamente una visita y responda JSON: { "total": 1234, "updatedAt": "..." }.
+ * El endpoint debe aceptar POST y habilitar CORS para el dominio publicado.
+ */
+window.SITE_ANALYTICS = {
+  googleMeasurementId: 'G-JHFJDX7WV0',
+  publicVisitCounterEndpoint: ''
+};
 
 window.trackEvent = function (name, params = {}) {
   if (window.gtag && window.SITE_ANALYTICS.googleMeasurementId) {

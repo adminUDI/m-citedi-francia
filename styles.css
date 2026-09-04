@@ -6,13 +6,15 @@
 
 /* Cabecera a todo lo ancho: los logotipos conservan su espacio y no quedan recortados contra los márgenes. */
 .nav.contenedor{width:100%;max-width:none;margin:0;padding-inline:max(20px,calc((100% - 1120px)/2))}
-.brand{min-width:0;flex:0 0 auto}.brand img:first-child{width:48px;height:52px;max-width:none;object-fit:cover;object-position:left center}.brand img:nth-child(2){width:150px;height:52px;max-width:none;object-fit:contain;object-position:left center}.menu{margin-left:auto}
+.brand{min-width:0;flex:0 0 auto;gap:.8rem}.marca-logo{display:flex;align-items:center;justify-content:center;height:58px;padding:.35rem .55rem;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);border-radius:3px}.marca-logo img{display:block;max-width:132px;max-height:46px;width:auto;height:auto;object-fit:contain}.marca-ipn img{max-width:46px}.separador-logos{height:34px;width:1px;background:rgba(255,255,255,.48)}.menu{margin-left:auto}
 
 /* La imagen entregada (MICROSITIO WEB.png, ya disponible como fondo-evento) acompaña el llamado a registro sin competir con el texto. */
 .registro{position:relative;isolation:isolate;background:#06123d url('assets/fondo-evento.png') center 58%/cover no-repeat}.registro::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,10,61,.96) 0%,rgba(0,18,123,.91) 48%,rgba(0,10,61,.76) 100%)}.registro .llamada{min-height:220px;padding-block:2.25rem}.registro .llamada>div{max-width:680px}
 
-@media(max-width:800px){.nav.contenedor{padding-inline:20px}.brand img:first-child{width:40px;height:42px}.brand img:nth-child(2){width:120px;height:42px}.menu{margin-left:0}.registro .llamada{min-height:0;padding-block:1.25rem}}
-@media(max-width:460px){.brand img:first-child{width:32px;height:34px}.brand img:nth-child(2){width:92px;height:34px}.registro{background-position:center}.registro .llamada{padding-block:1.5rem}}
+@media(max-width:800px){.nav.contenedor{padding-inline:20px}.marca-logo{height:50px;padding:.3rem .45rem}.marca-logo img{max-width:105px;max-height:38px}.marca-ipn img{max-width:38px}.menu{margin-left:0}.registro .llamada{min-height:0;padding-block:1.25rem}}
+@media(max-width:460px){.brand{gap:.4rem}.marca-logo{height:42px;padding:.25rem .3rem}.marca-logo img{max-width:82px;max-height:30px}.marca-ipn img{max-width:30px}.separador-logos{height:26px}.registro{background-position:center}.registro .llamada{padding-block:1.5rem}}
+
+.metrica-destacada{border-top:3px solid var(--turquesa)!important}.metrica-valor{font-size:1.65rem!important;font-weight:800;color:var(--azul)!important;line-height:1.15}.metrica-ayuda{font-size:.78rem!important}
 
 /* El registro principal queda dentro del espacio libre del flyer, sin cubrir
    los logos, título, fecha ni los datos del evento. */

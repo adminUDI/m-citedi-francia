@@ -4,9 +4,10 @@ Micrositio estático y responsive. Ábrase `index.html` en un navegador o publí
 
 ## Antes de publicar
 
-1. En `analytics.js`, sustituya `googleMeasurementId: ''` por el ID de medición de Google Analytics 4 (formato `G-XXXXXXXXXX`). Esto registra visitas, clics de registro y vistas de las secciones, sin que el sitio guarde información personal.
-2. Cambie cada círculo con iniciales de la sección de participantes por las fotografías oficiales cuando estén disponibles.
-3. Tras la transmisión, reemplace el bloque `.video-placeholder` en `index.html` por el iframe de la grabación publicada en YouTube.
+1. En `analytics.js`, confirme que `googleMeasurementId` corresponda a la propiedad institucional de Google Analytics 4. Esto registra visitas, clics de registro y vistas de las secciones, sin que el sitio guarde información personal.
+2. Para mostrar un contador total dentro de la página, configure `publicVisitCounterEndpoint` con una URL HTTPS propia. Debe aceptar `POST` con `{ "path": "/" }`, incrementar la visita de manera atómica y responder `{ "total": 1234, "updatedAt": "2026-09-04T12:00:00Z" }`. El servicio debe habilitar CORS sólo para el dominio del micrositio. Google Analytics no debe exponerse con una clave de administración en el navegador.
+3. Cambie cada círculo con iniciales de la sección de participantes por las fotografías oficiales cuando estén disponibles.
+4. Tras la transmisión, reemplace el bloque `.video-placeholder` en `index.html` por el iframe de la grabación publicada en YouTube.
 
 La URL de registro configurada es `https://n9.cl/fpd4r`, conforme al material entregado.
 
