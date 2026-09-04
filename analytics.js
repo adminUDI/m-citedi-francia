@@ -1,13 +1,6 @@
-/*
- * Google Analytics registra el tráfico; sus cifras no se pueden leer de forma
- * segura desde un sitio estático. Para publicar un total en la página,
- * configure publicVisitCounterEndpoint con un endpoint HTTPS que incremente
- * atómicamente una visita y responda JSON: { "total": 1234, "updatedAt": "..." }.
- * El endpoint debe aceptar POST y habilitar CORS para el dominio publicado.
- */
+/* Google Analytics 4 registra visitas y eventos del micrositio. */
 window.SITE_ANALYTICS = {
-  googleMeasurementId: 'G-JHFJDX7WV0',
-  publicVisitCounterEndpoint: ''
+  googleMeasurementId: 'G-JHFJDX7WV0'
 };
 
 window.trackEvent = function (name, params = {}) {

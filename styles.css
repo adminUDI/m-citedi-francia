@@ -16,8 +16,19 @@
 
 .metrica-destacada{border-top:3px solid var(--turquesa)!important}.metrica-valor{font-size:1.65rem!important;font-weight:800;color:var(--azul)!important;line-height:1.15}.metrica-ayuda{font-size:.78rem!important}
 
+.avatar-foto{overflow:hidden}.avatar-foto img{width:100%;height:100%;object-fit:cover}
+
 /* El registro principal queda dentro del espacio libre del flyer, sin cubrir
    los logos, título, fecha ni los datos del evento. */
 .flyer-portada{position:relative}.flyer-portada .hero-registro{position:absolute;left:15%;bottom:6%;display:block;padding:0;background:transparent}.flyer-portada .hero-registro .boton{box-shadow:0 8px 24px rgba(0,8,48,.28)}
 @media(max-width:800px){.flyer-portada .hero-registro{left:50%;bottom:5%;transform:translateX(-50%);white-space:nowrap}}
 @media(max-width:460px){.flyer-portada .hero-registro{bottom:3%;transform:translateX(-50%) scale(.82);transform-origin:center bottom}}
+
+/* Logotipos independientes con proporción y presencia institucional. */
+.nav{height:100px}.brand{gap:1rem}.marca-logo{height:78px;padding:.45rem .8rem;background:rgba(255,255,255,.08)}.brand .marca-logo img{max-width:none;max-height:64px}.marca-ipn img{width:62px}.marca-citedi img{width:186px}.separador-logos{height:52px}
+
+/* Fichas de participantes y fotografías centradas. */
+.tarjeta{align-items:center;min-height:300px;text-align:center}.avatar{width:116px;height:116px;margin:0 auto 1.25rem}.perfil-boton{align-self:center;text-align:center}.perfil-foto{display:block;width:148px;height:148px;margin:0 auto 1.35rem;border-radius:50%;object-fit:cover;border:3px solid var(--turquesa)}
+
+@media(max-width:800px){.nav{height:84px}.marca-logo{height:66px;padding:.35rem .6rem}.brand .marca-logo img{max-height:52px}.marca-ipn img{width:50px}.marca-citedi img{width:148px}.separador-logos{height:42px}.menu{top:84px}.avatar{width:106px;height:106px}}
+@media(max-width:460px){.nav{height:72px}.brand{gap:.5rem}.marca-logo{height:56px;padding:.3rem .42rem}.brand .marca-logo img{max-height:42px}.marca-ipn img{width:40px}.marca-citedi img{width:118px}.separador-logos{height:34px}.menu{top:72px}.avatar{width:100px;height:100px}.perfil-foto{width:124px;height:124px}}
