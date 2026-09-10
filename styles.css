@@ -41,5 +41,9 @@
 /* Logotipos invertidos y sin fondos independientes sobre la barra institucional. */
 .marca-logo{padding:0;background:transparent;border:0;filter:brightness(0) invert(1)}
 
+/* Participantes en el orden del programa. */
+.participantes-nota{margin:0 0 1.5rem;color:#536083;font-size:.95rem}
+.avatar-gladys{background:#edf1f7}.avatar-foto .foto-gladys{object-fit:cover;object-position:center 14%;transform:scale(.84)}
+
 /* Contenido centrado en las secciones y semblanzas. */
 .intro .contenedor,.programa .contenedor,.participantes .contenedor,.grabacion .contenedor,.registro .llamada{text-align:center}.llamada{justify-content:center}.perfil-modal{text-align:center}.modal-cabecera{position:relative;justify-content:center}.modal-cerrar{position:absolute;right:0;top:0}.perfil-modal ul{text-align:left}
