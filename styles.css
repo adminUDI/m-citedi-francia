@@ -45,5 +45,10 @@
 .participantes-nota{margin:0 0 1.5rem;color:#536083;font-size:.95rem}
 .avatar-gladys{background:#edf1f7}.avatar-foto .foto-gladys{object-fit:cover;object-position:center 14%;transform:scale(.84)}
 
+/* Cuadrícula horizontal de participantes. */
+.participantes-horizontal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+@media(max-width:900px){.participantes-horizontal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.participantes-horizontal{grid-template-columns:1fr}}
+
 /* Contenido centrado en las secciones y semblanzas. */
 .intro .contenedor,.programa .contenedor,.participantes .contenedor,.grabacion .contenedor,.registro .llamada{text-align:center}.llamada{justify-content:center}.perfil-modal{text-align:center}.modal-cabecera{position:relative;justify-content:center}.modal-cerrar{position:absolute;right:0;top:0}.perfil-modal ul{text-align:left}
