@@ -43,7 +43,7 @@
 
 /* Participantes en el orden del programa. */
 .participantes-nota{margin:0 0 1.5rem;color:#536083;font-size:.95rem}
-.avatar-gladys{background:#fff}.avatar-foto .foto-gladys{object-fit:cover;object-position:center top;transform:scale(.76)}.perfil-foto.foto-gladys-modal{object-position:center top}
+.avatar-gladys{background:#fff}.avatar-foto .foto-gladys{object-fit:cover;object-position:center top;transform:none}.perfil-foto.foto-gladys-modal{object-position:center top}
 .panelistas{list-style:none!important;margin:1.1rem 0 0!important;padding:0!important;text-align:center!important}.panelistas li{margin:.75rem 0!important}.panelistas strong{color:var(--azul)}
 
 /* Cuadrícula horizontal de participantes. */
@@ -53,3 +53,6 @@
 
 /* Contenido centrado en las secciones y semblanzas. */
 .intro .contenedor,.programa .contenedor,.participantes .contenedor,.grabacion .contenedor,.registro .llamada{text-align:center}.llamada{justify-content:center}.perfil-modal{text-align:center}.modal-cabecera{position:relative;justify-content:center}.modal-cerrar{position:absolute;right:0;top:0}.perfil-modal ul{text-align:left}
+
+/* Espacio para el cierre y las semblanzas de la plática conjunta. */
+.modal-cabecera{padding-inline:2rem}.semblanza-compartida + .semblanza-compartida{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--borde)}
