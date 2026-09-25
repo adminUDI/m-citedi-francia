@@ -58,3 +58,11 @@
 .modal-cabecera{padding-inline:2rem}.semblanza-compartida + .semblanza-compartida{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--borde)}
 
 .tarjeta .participante-rol{color:var(--azul);font-weight:800;margin-bottom:.35rem}
+
+/* Portada y enlace a la grabación del evento. */
+.video-grabacion{display:flex;flex-direction:column;align-self:center;overflow:hidden;background:var(--azul);color:#fff;text-decoration:none;box-shadow:0 8px 24px rgba(7,17,59,.12)}
+.video-grabacion img{display:block;width:100%;height:auto}
+.video-grabacion-accion{display:flex;align-items:center;justify-content:center;gap:1rem;padding:1rem}
+.video-grabacion .play{flex-shrink:0;width:46px;height:46px;margin:0}
+.video-grabacion:hover .video-grabacion-accion{background:#07113b}
+.video-grabacion:focus-visible{outline:3px solid #00127b;outline-offset:5px}
